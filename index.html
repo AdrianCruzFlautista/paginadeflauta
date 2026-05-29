@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrián Cruz — Flautista</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --text-color: #f5f5f7;
+            --accent-gold: #c5a880;
+            --muted-gray: #86868b;
+            --card-bg: #16171a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            width: 100%;
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--muted-gray);
+            text-decoration: none;
+            font-size: 14px;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent-gold);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+            background: linear-gradient(135deg, rgba(11,12,16,1) 40%, rgba(20,22,26,0.6) 100%);
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-content span {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            color: var(--muted-gray);
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        .btn-premium {
+            display: inline-block;
+            padding: 14px 34px;
+            border: 1px solid var(--accent-gold);
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s;
+        }
+
+        .btn-premium:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-color);
+        }
+
+        .hero-image-wrapper {
+            position: absolute;
+            right: 5%;
+            top: 55%;
+            transform: translateY(-50%);
+            width: 420px;
+            height: 550px;
+            z-index: 1;
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            padding: 15px;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(30%) contrast(110%);
+        }
+
+        footer {
+            padding: 60px 10%;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #08090c;
+        }
+
+        .footer-socials a {
+            color: var(--muted-gray);
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 120px;
+                text-align: center;
+            }
+
+            .hero-image-wrapper {
+                position: relative;
+                width: 100%;
+                max-width: 350px;
+                height: 450px;
+                top: auto;
+                right: auto;
+                transform: none;
+                margin-top: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">ADRIÁN CRUZ</a></div>
+        <nav>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="biografia.html">Biografía</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span>Estudio de Flauta Traversa</span>
+            <h1>Excelencia técnica, interpretación profunda.</h1>
+            <p>Clases particulares de flauta académica y traverso barroco.</p>
+
+            <a href="https://wa.me/51989207101?text=Hola%20Adri%C3%A1n,%20vi%20tu%20p%C3%A1gina%20web%20y%20deseo%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20clases%20de%20flauta." class="btn-premium" target="_blank">
+                Solicitar Información
+            </a>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <img src="images/hero.jpg" alt="Adrián Cruz - Universidad Nacional de Música">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Adrián Cruz.</p>
+
+        <div class="footer-socials">
+            <a href="https://instagram.com/_ubicuo" target="_blank">Instagram</a>
+            <a href="https://youtube.com/@AdrianCCFlute" target="_blank">YouTube</a>
+            <a href="https://wa.me/51989207101" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+</body>
+</html>
