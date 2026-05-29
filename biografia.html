@@ -1,213 +1,130 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografía — Adrián Cruz</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0b0c10;
-            --text-color: #f5f5f7;
-            --accent-gold: #c5a880;
-            --muted-gray: #86868b;
-        }
+<style>
+.bio-wrapper {
+    padding: 160px 10% 80px 10%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 90px;
+    align-items: start;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+.bio-image-pane {
+    border: 1px solid rgba(197, 168, 128, 0.15);
+    padding: 18px;
+    position: sticky;
+    top: 120px;
+}
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-        }
+.bio-image-pane img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(15%) contrast(108%);
+}
 
-        header {
-            width: 100%;
-            padding: 30px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 100;
-        }
+.bio-text-pane span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 15px;
+}
 
-        .logo a {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text-color);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
+.bio-text-pane h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    margin-bottom: 45px;
+    line-height: 1.1;
+}
 
-        nav a {
-            color: var(--muted-gray);
-            text-decoration: none;
-            font-size: 14px;
-            margin-left: 30px;
-            transition: color 0.3s;
-        }
+.bio-text-pane p {
+    color: var(--muted-gray);
+    font-size: 16px;
+    line-height: 1.95;
+    margin-bottom: 28px;
+    text-align: justify;
+}
 
-        nav a:hover,
-        nav a.active {
-            color: var(--accent-gold);
-        }
+.bio-text-pane p strong {
+    color: var(--text-color);
+    font-weight: 500;
+}
 
-        .bio-wrapper {
-            padding: 160px 10% 80px 10%;
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
+@media (max-width: 900px) {
+    .bio-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
 
-        .bio-image-pane {
-            border: 1px solid rgba(197, 168, 128, 0.15);
-            padding: 15px;
-            position: sticky;
-            top: 140px;
-        }
+    .bio-image-pane {
+        position: relative;
+        top: auto;
+    }
 
-        .bio-image-pane img {
-            width: 100%;
-            height: auto;
-            display: block;
-            filter: grayscale(20%) contrast(105%);
-        }
+    .bio-text-pane h1 {
+        font-size: 42px;
+    }
+}
+</style>
 
-        .bio-text-pane span {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-gold);
-            display: block;
-            margin-bottom: 15px;
-        }
+<div class="bio-wrapper">
 
-        .bio-text-pane h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            margin-bottom: 40px;
-            line-height: 1.2;
-        }
+```
+<div class="bio-image-pane">
+    <img src="images/biografia.jpg" alt="Adrián Cruz en interpretación">
+</div>
 
-        .bio-text-pane p {
-            color: var(--muted-gray);
-            font-size: 15px;
-            margin-bottom: 25px;
-            text-align: justify;
-        }
+<article class="bio-text-pane">
 
-        .bio-text-pane p strong {
-            color: var(--text-color);
-            font-weight: 500;
-        }
+    <span>Perfil e Historia</span>
 
-        footer {
-            padding: 60px 10%;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #08090c;
-        }
+    <h1>Trayectoria Artística</h1>
 
-        .footer-socials a {
-            color: var(--muted-gray);
-            text-decoration: none;
-            font-size: 13px;
-            margin-left: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    <p>
+        <strong>Adrián Cruz</strong> es un destacado flautista peruano enfocado en la música académica.
+        Realizó sus estudios profesionales en la Universidad Nacional de Música del Perú,
+        formándose bajo la tutela de los maestros César Peredo, Ricardo Maldonado
+        (en la sección preparatoria) y Pedro Alfaro (en el nivel superior).
+    </p>
 
-        .footer-socials a:hover {
-            color: var(--accent-gold);
-        }
+    <p>
+        Su formación e interpretación se han enriquecido mediante clases maestras
+        con renombrados flautistas internacionales como Vincent Touzet (Francia),
+        Rebecca Blau (Suiza), Alejandro Lavanderos (Chile),
+        Jean-Philippe Grometto (Francia) y Samuel Casale (Francia).
+        Asimismo, ha desarrollado una especialización en traverso barroco
+        junto al maestro Sergio Portilla.
+    </p>
 
-        @media (max-width: 900px) {
-            .bio-wrapper {
-                grid-template-columns: 1fr;
-            }
+    <p>
+        Con una notable trayectoria en el ámbito orquestal,
+        se desempeña actualmente como
+        <strong>Flautista Principal de la Orquesta Sinfónica de Lima</strong>.
+        Anteriormente, ocupó posiciones de liderazgo en las orquestas sinfónicas
+        de la Escuela de Música Tempo, RyR Academy y la Orquesta Sinfónica del Británico,
+        además de integrar activamente la Orquesta Sinfónica y la Orquesta de Cámara
+        de la Universidad Nacional de Música.
+    </p>
 
-            .bio-image-pane {
-                position: relative;
-                top: auto;
-            }
+    <p>
+        Como solista e integrante de agrupaciones de cámara,
+        ha participado consecutivamente en el prestigioso Festival Internacional
+        de Flautistas organizado por el maestro César Vivanco.
+    </p>
 
-            footer {
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo"><a href="index.html">ADRIÁN CRUZ</a></div>
+    <p>
+        Su actividad artística lo ha llevado a presentarse en algunas de las salas
+        de concierto más importantes del Perú, incluyendo el Gran Teatro Nacional,
+        el Teatro Municipal de Lima, el Teatro Segura, la Sala Alzedo,
+        el Auditorio del Ministerio de Cultura, el Teatro NOS PUCP,
+        el Teatro Ccori Wasi y el Centro Español del Perú,
+        entre otros espacios de alto relieve cultural.
+    </p>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="biografia.html" class="active">Biografía</a>
-        </nav>
-    </header>
+</article>
+```
 
-    <div class="bio-wrapper">
-        <div class="bio-image-pane">
-            <img src="images/biografia.jpg" alt="Adrián Cruz en interpretación">
-        </div>
+</div>
 
-        <div class="bio-text-pane">
-            <span>Perfil e Historia</span>
-
-            <h1>Trayectoria Artística</h1>
-
-            <p>
-                <strong>Adrián Cruz</strong> es un destacado flautista peruano enfocado en la música académica. Realizó sus estudios
-profesionales en la Universidad Nacional de Música del Perú, formándose bajo la tutela de los maestros César
-Peredo, Ricardo Maldonado (en la sección preparatoria) y Pedro Alfaro (en el nivel superior). Su formación e
-interpretación se han enriquecido en clases maestras con renombrados flautistas internacionales como Vincent
-Touzet (Francia), Rebecca Blau (Suiza), Alejandro Lavanderos (Chile), Jean-Philippe Grometto (Francia) y Samuel
-Casale (Francia), además de especializarse en traverso barroco junto al maestro Sergio Portilla
-            </p>
-
-            <p>
-                Con una notable trayectoria en el ámbito orquestal, se desempeña actualmente como Flautista Principal de la
-Orquesta Sinfónica de Lima. Anteriormente, ha ocupado la misma posición de liderazgo en las orquestas sinfónicas
-de la Escuela de Música Tempo, RyR Academy y la Orquesta Sinfónica del Británico, además de haber integrado
-activamente la Orquesta Sinfónica y la Orquesta de Cámara de la Universidad Nacional de Música.
-                  </p>
-                
-                 <p>
-Como solista e integrante de agrupaciones, ha participado consecutivamente en el prestigioso Festival Internacional
-de Flautistas organizado por el maestro César Vivanco. Su calidad interpretativa lo ha llevado a pisar las salas de
-concierto más importantes del Perú, incluyendo el Gran Teatro Nacional, el Teatro Municipal de Lima, el Teatro
-Segura, la Sala Alzedo, el Auditorio del Ministerio de Cultura, el Teatro NOS PUCP, el Teatro Ccori Wasi y el
-Centro Español del Perú, entre otros espacios de alto relieve cultural
-            </p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Adrián Cruz.</p>
-
-        <div class="footer-socials">
-            <a href="https://instagram.com/_ubicuo" target="_blank">Instagram</a>
-            <a href="https://youtube.com/@AdrianCCFlute" target="_blank">YouTube</a>
-            <a href="https://wa.me/51989207101" target="_blank">WhatsApp</a>
-        </div>
-    </footer>
-</body>
-</html>
